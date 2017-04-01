@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Email Validation with DB</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class='wrapper'>
+        <p>Are you sure you would like to delete this laptop?</p>
+        <form action='/delete_yes/{{laptop['id']}}' method='POST'>
+        <input type='submit' name='delete_yes' value='Yes'/>
+        </form>
+        <form action='/delete_no/{{laptop['id']}}' method='POST'>
+        <input type='submit' name='delete_no' value='No'/>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Email Validation with DB</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class='wrapper'>
+        <form action='/create' method='POST'>
+            <label for='title'>Title: <input type='text', name='title'</></label>
+            <label for='size'>Size: <input type='text', name='size'</></label>
+            <label for='color'>Color: <input type='text', name='color'</></label>
+            <label for='screen_options'>Screen Options: <input type='text', name='screen_options'</></label>
+            <label for='touchpad'>Touchpad: <input type='text', name='touchpad'</></label>
+            <input type='submit' name='Submit'/>
+        </form>
+    </div>
+</body>
+</html>

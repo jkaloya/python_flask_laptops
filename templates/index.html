@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Laptops</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class='wrapper'>
+        <h4>Latops</h4>
+        {% for laptops in all_laptops: %}
+        <p>Title: {{ laptops['title'] }}</p>
+        <p>Size: {{ laptops['size'] }}</p>
+        <form action='/info/{{laptops['id']}}' method='GET'>
+        <input type='submit' name='View Info' value='View Info'/>
+        </form>
+        <form action='/update/{{laptops['id']}}' method='GET'><input type='submit' name='Update' value='Update'/></form>
+        <form action='/delete/{{laptops['id']}}' method='GET'><input type='submit' name='Delete' value='Delete'/></form>
+        <hr>
+        {% endfor %}
+        <form action='/add' method='GET'>
+        <input type='submit' name='add_laptop' value='Add Laptop'/>
+        </form>
+    </div>
+</body>
+</html>

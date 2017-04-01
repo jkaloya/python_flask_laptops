@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Laptops</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class='wrapper'>
+        <h4>Details</h4>
+        <p>Title: {{ one_laptop['title'] }}</p>
+        <p>Size: {{ one_laptop['size'] }}</p>
+        <p>Color: {{ one_laptop['color'] }}</p>
+        <p>Screen Option: {{ one_laptop['screen_options'] }}</p>
+        <p>Touchpad: {{ one_laptop['touchpad'] }}</p>
+    </div>
+</body>
+</html>
